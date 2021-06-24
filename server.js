@@ -13,8 +13,8 @@ app.prepare().then(() => {
   createServer(httpsOptions, (req, res) => {
     const parsedUrl = parse(req.url, true);
     handle(req, res, parsedUrl);
-  }).listen(80, (err) => {
+  }).listen(3000, (err) => {
     if (err) throw err;
-    console.log("> Server started on https://localhost:80");
+    console.log("> Server started on https://localhost:3000");
   });
 });
